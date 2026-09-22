@@ -1243,9 +1243,13 @@ function setMode(modeKey) {
     updateClock(app.state.currentIsoDate);
 }
 
-// Initialize: pick first registered mode, or fall back.
+// Open on Mode 3. The dropdown still lists modes 1–4 in that order.
+// Switching to another mode stays there; only a fresh page load returns to Mode 3.
+var DEFAULT_MODE_KEY = "mode_3";
 var initialModes = getModeList();
-app.state.modeKey = initialModes.length ? initialModes[0].key : null;
+app.state.modeKey = __PD_MODES[DEFAULT_MODE_KEY]
+    ? DEFAULT_MODE_KEY
+    : (initialModes.length ? initialModes[0].key : null);
 renderPanelControls();
 updateStatsPanel(MAP_TIME_START);
 updateClock(MAP_TIME_START);

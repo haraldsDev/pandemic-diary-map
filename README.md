@@ -20,7 +20,7 @@ A local static server is the reliable way to open the page. Leaflet itself is lo
 
 ## What you can do
 
-The mode list is in the left panel.
+The page opens in Mode 3. The mode list is in the left panel. Modes 1 and 2 stay available; choosing one of them keeps that view until you pick another or reload the page.
 
 | Mode | What it shows |
 | --- | --- |
